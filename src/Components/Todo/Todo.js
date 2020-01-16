@@ -2,12 +2,15 @@ import React from "react";
 
 const Task = props => {
 	return (
-		<article
+		<li
 			// onClick={event => props.toggleCompleted(props.item.id)}
 			// className={`item${props.item.completed ? " completed" : ""}`}
+			className='todo-item'
 		>
-			{/*<p>{props.item.task}</p>*/}
-		</article>
+			<article>
+				<p>{props.item.task}</p>
+			</article>
+		</li>
 	);
 };
 

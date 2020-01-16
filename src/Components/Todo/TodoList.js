@@ -7,18 +7,22 @@ const TodoList = props => {
 
 	return (
 		<>
-			<section id='todo-list' className='todo-list'>
-				<Task
-					// key={item.id}
-					// item={item}
-					// togglePurchased={props.togglePurchased}
-				/>
+			<section id='todo-list-section' className='todo-list-section'>
+				<ul id='todo-list' className='todo-list'>
+				{props.todolist.map(item => (
+					<Task
+						key={item.id}
+						item={item}
+						// togglePurchased={props.togglePurchased}
+					/>
+				))}
+				</ul>
 			</section>
-			<footer id='todo-footer' className='todo-footer'>
-				<button>
+			<section id='todo-bottom-section' className='todo-bottom-section'>
+				<button className='button button-clear'>
 					Clear Completed
 				</button>
-			</footer>
+			</section>
 		</>
 	);
 

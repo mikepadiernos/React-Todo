@@ -22,17 +22,34 @@ class App extends React.Component {
     };
   }
 
+  addNewTask = newItemTask => {
+    const newState = {
+      ...this.state,
+      todoList: [
+        ...this.state.todoList,
+        { task: newItemTask, completed: false, id: Math.floor((Math.random() * 1500000000000) + 1) }
+      ]
+    };
+    this.setState(newState);
+  };
+
   render() {
     return (
-      <main>
-        <header>
+      <div className='app app-container'>
+        <header id='app-header' className='app-header'>
           <h1>Todo App</h1>
         </header>
-        <main>
-          <TodoForm />
-          <TodoList />
+        <main id='app-content' className='app-content'>
+          <TodoForm
+            addNewTask={this.addNewTask}
+          />
+          <TodoList
+            todolist={this.state.todoList}
+            // toggleCompleted={this.toggleCompleted}
+            // clearCompleted={this.clearCompleted}
+          />
         </main>
-      </main>
+      </div>
     );
   }
 }
