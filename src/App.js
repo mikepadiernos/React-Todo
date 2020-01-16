@@ -33,6 +33,32 @@ class App extends React.Component {
     this.setState(newState);
   };
 
+  toggleCompleted = id => {
+    const newState = {
+      ...this.state,
+      todoList: this.state.todoList.map(item => {
+        if (item.id === id) {
+          return {
+            ...item,
+            completed: !item.completed
+          };
+        }
+        return item;
+      })
+    };
+    this.setState(newState);
+  };
+
+  clearCompleted = () => {
+    const newState = {
+      ...this.state,
+      todoList: this.state.todoList.filter(item => {
+        return !item.completed;
+      })
+    };
+    this.setState(newState);
+  };
+
   render() {
     return (
       <div className='app app-container'>
@@ -45,8 +71,8 @@ class App extends React.Component {
           />
           <TodoList
             todolist={this.state.todoList}
-            // toggleCompleted={this.toggleCompleted}
-            // clearCompleted={this.clearCompleted}
+            toggleCompleted={this.toggleCompleted}
+            clearCompleted={this.clearCompleted}
           />
         </main>
       </div>
