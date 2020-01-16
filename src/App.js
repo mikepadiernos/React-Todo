@@ -1,7 +1,14 @@
+// Import React Components
 import React from 'react';
+
+// Import Data source
 import Data from "./Data/Data";
 
+// Import App Components
+import TodoForm from "./Components/Todo/TodoForm";
+import TodoList from "./Components/Todo/TodoList";
 
+// App component render
 class App extends React.Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
@@ -22,7 +29,8 @@ class App extends React.Component {
           <h1>Todo App</h1>
         </header>
         <main>
-
+          <TodoForm />
+          <TodoList />
         </main>
       </main>
     );
