@@ -4,16 +4,21 @@
 	display flex
 	flex-flow column wrap
 	height 100vh
-	justify-content center
+	justify-content flex-start
+	@media screen and (min-width 1001px)
+		justify-content center
 	
 .app-container
 	background-color #fff
-	border-radius 4px
-	box-shadow 0 12.1px 10px rgba(0, 0, 0, 0.035),
-						 0 97px 80px rgba(0, 0, 0, 0.07)
-	margin 0 auto
-	padding 2rem
-	width 30rem
+	box-sizing border-box
+	width 100%
+	@media screen and (min-width 1001px)
+		border-radius 4px
+		box-shadow 0 12.1px 10px rgba(0, 0, 0, 0.035),
+		0 97px 80px rgba(0, 0, 0, 0.07)
+		margin 0 auto
+		padding 2rem
+		width 30rem
 	main
 		#todo-list-section
 			ul
