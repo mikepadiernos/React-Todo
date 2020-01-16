@@ -37,8 +37,14 @@
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-stylus": "^2.7.0",
-    "postcss": "^7.0.26"
+    "normalize.css": "^8.0.1",
+    "postcss": "^7.0.26",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-scripts": "3.1.2",
+    "stylus": "^0.54.7"
   }
 }
