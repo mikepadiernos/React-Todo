@@ -63,7 +63,7 @@ class App extends React.Component {
     return (
       <div className='app app-container'>
         <header id='app-header' className='app-header'>
-          <h1>Todo App</h1>
+          <h1>My Todo's</h1>
         </header>
         <main id='app-content' className='app-content'>
           <TodoForm
